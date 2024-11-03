@@ -173,4 +173,77 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // Header scroll behavior
+    let lastScrollTop = 0;
+    let headerTimeout;
+    const header = document.querySelector('.site-header');
+    const SCROLL_THRESHOLD = 50; // Minimum scroll amount before hiding/showing
+
+    function handleScroll() {
+        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // Don't do anything if we haven't scrolled enough
+        if (Math.abs(lastScrollTop - currentScroll) <= SCROLL_THRESHOLD) return;
+        
+        // Scrolling down
+        if (currentScroll > lastScrollTop && currentScroll > header.offsetHeight) {
+            header.classList.add('header-hidden');
+            header.classList.remove('header-visible');
+        } 
+        // Scrolling up
+        else {
+            header.classList.remove('header-hidden');
+            header.classList.add('header-visible');
+        }
+        
+        lastScrollTop = currentScroll;
+    }
+
+    // Debounced scroll handler
+    function debouncedScroll() {
+        clearTimeout(headerTimeout);
+        headerTimeout = setTimeout(handleScroll, 10);
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', debouncedScroll, { passive: true });
+
+    // Handle touch events for mobile
+    let touchStart = 0;
+    let touchEnd = 0;
+
+    document.addEventListener('touchstart', e => {
+        touchStart = e.touches[0].clientY;
+    }, { passive: true });
+
+    document.addEventListener('touchmove', e => {
+        touchEnd = e.touches[0].clientY;
+        
+        const touchDiff = touchStart - touchEnd;
+        
+        if (Math.abs(touchDiff) > SCROLL_THRESHOLD) {
+            if (touchDiff > 0) { // Scrolling up
+                header.classList.add('header-hidden');
+                header.classList.remove('header-visible');
+            } else { // Scrolling down
+                header.classList.remove('header-hidden');
+                header.classList.add('header-visible');
+            }
+        }
+    }, { passive: true });
+
+    // Reset header visibility when touch ends
+    document.addEventListener('touchend', () => {
+        touchStart = 0;
+        touchEnd = 0;
+    }, { passive: true });
+
+    // Show header when reaching top of page
+    window.addEventListener('scroll', () => {
+        if (window.scrollY === 0) {
+            header.classList.remove('header-hidden');
+            header.classList.add('header-visible');
+        }
+    }, { passive: true });
 }); 

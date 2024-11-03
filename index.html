@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ATROLOG - שירותי פיתוח אתרים מקצועיים">
     <title>ATROLOG - פתרונות דיגיטליים</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/nav.css">
@@ -64,7 +64,7 @@
                 </svg>
             </button>
             <div class="logo-container">
-                <a href="/" aria-label="ATROLOG - דף הבית">
+                <a href="/index.html" aria-label="ATROLOG - דף הבית">
                     <img src="images/logo.png" alt="ATROLOG לוגו" class="logo" width="120" height="40">
                 </a>
             </div>
@@ -186,19 +186,21 @@
                             </p>
                         </div>
                         
-                        <div class="stats-grid" role="list">
-                            <div class="stat-item" role="listitem" tabindex="0">
-                                <span tabindex="0" class="stat-number">150+</span>
-                                <span tabindex="0" class="stat-label">פרויקטים</span>
-                            </div>
-                            <div class="stat-item">
-                                <span tabindex="0" class="stat-number">98%</span>
-                                <span tabindex="0" class="stat-label">שביעות רצון</span>
-                            </div>
-                            <div class="stat-item">
-                                <span tabindex="0" class="stat-number">5</span>
-                                <span tabindex="0" class="stat-label">שנות ניסיון</span>
-                            </div>
+                        <div class="stats-section">
+                            <ul class="stats-grid" role="list">
+                                <li class="stat-item" role="listitem">
+                                    <span class="stat-number" aria-label="מעל 150 פרויקטים">150+</span>
+                                    <span class="stat-label">פרויקטים</span>
+                                </li>
+                                <li class="stat-item" role="listitem">
+                                    <span class="stat-number" aria-label="98 אחוז שביעות רצון">98%</span>
+                                    <span class="stat-label">שביעות רצון</span>
+                                </li>
+                                <li class="stat-item" role="listitem">
+                                    <span class="stat-number" aria-label="5 שנות ניסיון">5</span>
+                                    <span class="stat-label">שנות ניסיון</span>
+                                </li>
+                            </ul>
                         </div>
 
                         <div class="values-grid">
@@ -314,7 +316,7 @@
                 </ul>
             </nav>
 
-            <div class="footer-section contact-info" tabindex="0">
+            <div style="text-align:center;" class="footer-section contact-info" tabindex="0">
                 <h2 id="contact-info-title" class="footer-title" tabindex="0">צור קשר</h2>
                 <address class="footer-contact">
                     <p class="contact-item" tabindex="0">
