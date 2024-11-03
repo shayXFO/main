@@ -1,0 +1,37 @@
+Generate a full website offering a range of web-related services, with all content in Hebrew, adhering strictly to WCAG 2.1 Level AA accessibility standards and using a clean, scalable, and minimalist design system. This website must use only semantic HTML elements to enhance accessibility, structure, and SEO. Ensure it remains responsive across all devices (iPhones, tablets, desktops) and cross-browser compatible.
+
+Design Specifications:
+
+Style and Accessibility Requirements:
+
+Employ a minimalist, geometric, and vector-style art approach with a focus on clean, professional layouts.
+Ensure AAA contrast compliance across both dark and light modes, maintaining high readability.
+Utilize a robust design system with consistent font sizes, line heights, text spacing, and media queries, ensuring perfect adaptability on all devices.
+Color Palette:
+
+Primary Color: #FF6B2B (vibrant orange for key accents)
+Secondary Color: #2B4BFF (tech blue for secondary elements)
+Optional Accent: #1A1A1A (near-black for headers and important text)
+Logo and Iconography with Fox Elements:
+
+Include a geometric fox head icon facing right, symbolizing forward-thinking and innovation. The fox’s eye should be a geometric shape with subtle circuit-like details.
+Use sharp lines with sacred geometry patterns within the fox design, and ensure it functions well in both color and monochrome.
+The logo should work in both square and horizontal formats, maintaining clarity at all scales.
+Typography:
+
+Use a bold, modern sans-serif font for the website name ("ATROLOG") and primary headings, integrating tech-inspired elements into select letters in the logo.
+Text should be high-contrast for readability, with clean edges for scalability, and support accessible font scaling for users.
+Semantic HTML Structure and Layout:
+
+Organize content sections with semantic HTML tags (<header>, <nav>, <main>, <section>, <article>, <aside>, <footer>) to improve SEO, screen reader accessibility, and clear navigation.
+Provide clear sections for each service offering with organized pricing information, using <section> and <article> elements for structured content.
+Use <header> for branding and navigation, <main> for service offerings, and <footer> for contact information, legal disclaimers, and accessibility options.
+User Interaction and Accessibility Features:
+
+Ensure screen reader compatibility, keyboard navigation, and visible focus indicators.
+Include fully accessible dark and light modes with smooth transitions, each maintaining AAA contrast levels.
+Optimize for performance, fast loading times, and mobile-first design principles.
+Mood/Feel:
+
+Convey a modern, innovative, and reliable feel with a blend of professionalism and dynamic energy.
+Use negative space effectively for an uncluttered, accessible, and visually appealing user experience.
